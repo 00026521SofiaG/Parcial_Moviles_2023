@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rioFragment">
 
+    <fragment
+        android:id="@+id/rioFragment"
+        android:name="com.example.riotracker_00026521.ui.rio.RioFragment"
+        android:label="RioFragment" >
+        <action
+            android:id="@+id/action_rioFragment_to_newRioFragment"
+            app:destination="@id/newRioFragment" />
+        <action
+            android:id="@+id/action_rioFragment_to_rioInfoFragment"
+            app:destination="@id/rioInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newRioFragment"
+        android:name="com.example.riotracker_00026521.ui.rio.NewRioFragment"
+        android:label="NewRioFragment" >
+        <action
+            android:id="@+id/action_newRioFragment_to_rioFragment"
+            app:destination="@id/rioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rioInfoFragment"
+        android:name="com.example.riotracker_00026521.ui.rio.RioInfoFragment"
+        android:label="RioInfoFragment" >
+        <action
+            android:id="@+id/action_rioInfoFragment_to_rioFragment"
+            app:destination="@id/rioFragment" />
+    </fragment>
 </navigation>
