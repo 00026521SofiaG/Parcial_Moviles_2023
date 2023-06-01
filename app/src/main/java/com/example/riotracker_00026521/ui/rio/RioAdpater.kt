@@ -17,7 +17,7 @@ class RioAdpater(private val clickListener: (RioModel)-> Unit): RecyclerView.Ada
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RioViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout. , parent  , false)
+        val view = inflater.inflate(R.layout.item_rio , parent  , false)
         return RioViewHolder(view)
     }
 

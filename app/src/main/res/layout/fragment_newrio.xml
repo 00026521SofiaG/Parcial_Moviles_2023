@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -31,7 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/nameTv"
+                android:id="@+id/namerio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
@@ -55,24 +53,24 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/CategoryTv"
+                android:id="@+id/infrorio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:hint="Information"
+                android:hint="Longitud"
                 android:textColorHint="@color/white"
                 app:boxStrokeColor="@color/white"
                 app:hintTextColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/nameTv"
-                app:layout_constraintStart_toStartOf="@+id/nameTv"
-                app:layout_constraintTop_toBottomOf="@+id/nameTv">
+                app:layout_constraintEnd_toEndOf="@+id/namerio"
+                app:layout_constraintStart_toStartOf="@+id/namerio"
+                app:layout_constraintTop_toBottomOf="@id/namerio">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/category_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/cardback"
-                    android:text="@={viewmodel.info}"
+                    android:text="@={viewmodel.length}"
                     android:textColor="@color/white" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -87,6 +85,10 @@
                 android:onClick="@{()-> viewmodel.createRiver()}"
                 android:text="Guardar"
                 android:textColor="@color/black"
+                app:borderWidth="0dp"
+                app:layout_constraintEnd_toEndOf="@id/infrorio"
+                app:layout_constraintStart_toStartOf="@id/infrorio"
+                app:layout_constraintTop_toBottomOf="@id/infrorio"
                />
 
 

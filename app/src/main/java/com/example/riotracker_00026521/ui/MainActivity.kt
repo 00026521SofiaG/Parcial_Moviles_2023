@@ -1,4 +1,4 @@
-package com.example.riotracker_00026521
+package com.example.riotracker_00026521.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

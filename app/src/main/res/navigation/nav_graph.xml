@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/rioFragment">
 
     <fragment
         android:id="@+id/rioFragment"
         android:name="com.example.riotracker_00026521.ui.rio.RioFragment"
-        android:label="RioFragment" >
+        android:label="RioFragment"
+        tools:layout="@layout/fragment_rio">
         <action
             android:id="@+id/action_rioFragment_to_newRioFragment"
             app:destination="@id/newRioFragment" />
@@ -18,7 +20,8 @@
     <fragment
         android:id="@+id/newRioFragment"
         android:name="com.example.riotracker_00026521.ui.rio.NewRioFragment"
-        android:label="NewRioFragment" >
+        android:label="NewRioFragment"
+        tools:layout="@layout/fragment_newrio">
         <action
             android:id="@+id/action_newRioFragment_to_rioFragment"
             app:destination="@id/rioFragment" />
@@ -26,9 +29,6 @@
     <fragment
         android:id="@+id/rioInfoFragment"
         android:name="com.example.riotracker_00026521.ui.rio.RioInfoFragment"
-        android:label="RioInfoFragment" >
-        <action
-            android:id="@+id/action_rioInfoFragment_to_rioFragment"
-            app:destination="@id/rioFragment" />
-    </fragment>
+        android:label="RioInfoFragment"
+        tools:layout="@layout/fragment_rioinfo"/>
 </navigation>
